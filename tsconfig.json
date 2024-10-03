@@ -7,6 +7,12 @@
   "compilerOptions": {
     "types": ["@testing-library/jest-dom"],
     "jsx": "react-jsx",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+
+    //absolute import
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    }
   }
 }
