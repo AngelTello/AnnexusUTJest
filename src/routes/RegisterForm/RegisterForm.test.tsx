@@ -6,7 +6,7 @@ describe("RegisterForm component", () => {
     render(<RegisterForm />);
   });
 
-  const formFieldsTestCases = [
+  [
     {
       label: "First Name",
       type: "textbox",
@@ -23,8 +23,7 @@ describe("RegisterForm component", () => {
       label: "Age",
       type: "spinbutton",
     },
-  ];
-  formFieldsTestCases.forEach((test) => {
+  ].forEach((test) => {
     it(`should have displayed field: ${test.label}`, () => {
       expect(
         screen.getByRole(test.type, { name: test.label })
